@@ -1,4 +1,4 @@
-Enter file contents here
+
 =================================
 Codebook
 =================================
@@ -21,13 +21,13 @@ The dataset includes the following files:
   Data in the inertial signals folders is not used on this analysis
   
 Variables
+The tidy data set containts the average of all means and standard deviations related measurements , per activity and per subject
 
-Variables in the tidy data set:
-"x"
+Variables in the tidy data set are :
 "Subject"
 "Activity"
-"tBodyAcc.mean...X"
-"tBodyAcc.mean...Y"
+"tBodyAcc.mean...X" : average of tBodyAcc.meanX for Activity and Subject
+"tBodyAcc.mean...Y":
 "tBodyAcc.mean...Z"
 "tGravityAcc.mean...X"
 "tGravityAcc.mean...Y"
@@ -96,3 +96,12 @@ Variables in the tidy data set:
 
 
 Transformations
+
+Datasets from train and testsets (x-data) are merged into one data set for the X values
+All measurements containing "mean()" and "std()" are extracted
+The subject information ( y -data) is added to the selection of the means and standarddeviation measures
+Columnnames for "Subject" and "Activity" are added
+Activity numbers are replaced with appropriate activity names ( from "activity_labels.txt)
+For each subject and activity, averages for each value are calculated
+
+
