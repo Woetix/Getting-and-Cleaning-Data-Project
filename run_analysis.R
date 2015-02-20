@@ -54,4 +54,4 @@ for(i in 4:ncol(alldata)){
         tidydata[,i] <- aggregate( alldata[,i] ~ Subject+Activity, data = alldata, FUN = "mean" )[,3]
 }
 colnames(tidydata)[3:ncol(tidydata)] <- colnames(meanstdev)
-write.table(tidydata, file = "tidydata.txt")
+write.table(tidydata, file = "tidydata.txt",row.name=FALSE)
